@@ -4,11 +4,20 @@ class Restaurant():
         """"Initialize name and cuisine type"""
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
+        self.number_served = 0
 
     def describe_restaurant(self):
         """Describe the attributes of the restaurant"""
         print("Restaurant name is: " + self.restaurant_name)
         print("Cuisine type is: " + self.cuisine_type)
+
+    def set_number_served(self):
+        """Set the number of customers"""
+        self.number_served = input("Set a number for customers server")
+
+    def increment_number_served(self):
+        """Increase the customers served counter by 1"""
+        self.number_served += 1
 
 class User():
     """Class that models an user"""
@@ -30,4 +39,6 @@ restaurant = Restaurant("Crazy Chicken", "Fried Chicken")
 print(restaurant.restaurant_name)
 print(restaurant.cuisine_type)
 restaurant.describe_restaurant()
+restaurant.increment_number_served()
+print(restaurant.number_served)
 
