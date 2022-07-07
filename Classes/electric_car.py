@@ -24,4 +24,5 @@ class ElectricCar(car.Car):
         """
 my_tesla = ElectricCar('tesla', 'model s', '2016')
 my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
 print(my_tesla.get_descriptive_name())
