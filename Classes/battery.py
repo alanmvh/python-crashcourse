@@ -19,3 +19,7 @@ class Battery():
         message = "This car can go approximately" + str(range)
         message += "miles on a full charge"
         print(message)
+    
+    def upgrade_battery(self):
+        self.battery_size = 85
+        print("Battery upgraded to :" + str(self.battery_size))
