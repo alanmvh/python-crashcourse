@@ -1,3 +1,4 @@
+from privileges import Privilege
 class User():
     def __init__(self, first_name, last_name, nickname):
         """Initialize user attributes"""
@@ -13,13 +14,9 @@ class Administrator(User):
     def __init__(self, first_name, last_name, nickname):
         super().__init__(first_name, last_name, nickname)
         """Initializes Admin attributes and calls init from super class"""
-        self.privileges = ["Can add post", "Can delete post", "Can ban user"]
+        self.privileges = Privilege(["Can add post", "Can delete post", "Can ban user"])
 
-    def show_privileges(self):
-        """Display the privileges that administrators have"""
-        print("This user has the following permissions: ")
-        for permission in self.privileges:
-            print("Permissions: " + permission)
+  
 
 user = Administrator("Alan", "Villarreal", "Alan")
-user.show_privileges()
+user.privileges.show_privileges()
