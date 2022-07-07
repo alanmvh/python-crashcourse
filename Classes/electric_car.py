@@ -1,3 +1,4 @@
+from battery import Battery
 import car
 
 class ElectricCar(car.Car):
@@ -9,7 +10,7 @@ class ElectricCar(car.Car):
 
     def __init__(self, make, model, year):
         super().__init__(make, model, year)
-        self.battery_size = 70
+        self.battery = Battery()
     
     def describe_battery(self):
         """
@@ -22,4 +23,5 @@ class ElectricCar(car.Car):
         Electric cars dont have gas tanks
         """
 my_tesla = ElectricCar('tesla', 'model s', '2016')
+my_tesla.battery.describe_battery()
 print(my_tesla.get_descriptive_name())
