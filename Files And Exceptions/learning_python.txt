@@ -1,0 +1,4 @@
+In python you can create variables
+In python you can create dictionaries
+In python you can create loops and infinite loops
+In python you can create lists
